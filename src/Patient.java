@@ -1,4 +1,5 @@
 
+//import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.Connection;
 import java.awt.Font;
 import java.sql.SQLException;
@@ -28,6 +29,7 @@ public class Patient extends javax.swing.JFrame {
         tPasien.getTableHeader().setFont(new Font("SansSerif", Font.BOLD, 18));
         tPasien.getTableHeader().setOpaque(false);
         tPasien.setRowHeight(25);
+        tPasien.setEnabled(false);
     }
 
     /**
@@ -55,6 +57,7 @@ public class Patient extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jButton3 = new javax.swing.JButton();
+        jLabel13 = new javax.swing.JLabel();
         search = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -182,16 +185,16 @@ public class Patient extends javax.swing.JFrame {
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bg2.jpg"))); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
-        jLabel12.setText("Lorem Ipsum");
+        jLabel12.setText("Patient's page");
 
         jLabel20.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabel20.setText("Lorem Ipsum is simply dummy text of the printing and");
+        jLabel20.setText("‘Patient data’ and ‘Patient health information’ ");
 
         jLabel21.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabel21.setText("typesetting industry. Lorem Ipsum has been");
+        jLabel21.setText("are the most effective overarching");
 
         jLabel23.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabel23.setText("the industry's");
+        jLabel23.setText("terms to use.");
 
         jButton3.setBackground(new java.awt.Color(0, 0, 0));
         jButton3.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
@@ -203,41 +206,54 @@ public class Patient extends javax.swing.JFrame {
             }
         });
 
+        jLabel13.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
+        jLabel13.setText("Admin! ");
+        jLabel13.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+
         javax.swing.GroupLayout HomeLayout = new javax.swing.GroupLayout(Home);
         Home.setLayout(HomeLayout);
         HomeLayout.setHorizontalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HomeLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
+                .addGap(80, 80, 80)
                 .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12)
                     .addComponent(jLabel20)
                     .addComponent(jLabel21)
                     .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jButton3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
+                        .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.LEADING)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
                 .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 446, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel13)
+                .addGap(28, 28, 28))
         );
         HomeLayout.setVerticalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(HomeLayout.createSequentialGroup()
-                .addGap(215, 215, 215)
-                .addComponent(jLabel12)
-                .addGap(50, 50, 50)
-                .addComponent(jLabel20)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel21)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel23)
-                .addGap(18, 18, 18)
-                .addComponent(jButton3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
-                .addContainerGap(251, Short.MAX_VALUE)
-                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(126, 126, 126))
+                .addGap(26, 26, 26)
+                .addComponent(jLabel13)
+                .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HomeLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 193, Short.MAX_VALUE)
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 332, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(126, 126, 126))
+                    .addGroup(HomeLayout.createSequentialGroup()
+                        .addGap(163, 163, 163)
+                        .addComponent(jLabel12)
+                        .addGap(50, 50, 50)
+                        .addComponent(jLabel20)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel21)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel23)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
         main.add(Home, "card2");
@@ -311,9 +327,9 @@ public class Patient extends javax.swing.JFrame {
                     .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addComponent(jButton7)
-                .addGap(29, 29, 29)
+                .addGap(98, 98, 98)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
 
         main.add(search, "card3");
@@ -669,7 +685,7 @@ public class Patient extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backActionPerformed
-        new Menu() .setVisible(true);
+        new Menu().setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_backActionPerformed
 
@@ -689,16 +705,27 @@ public class Patient extends javax.swing.JFrame {
         model.addColumn("Alamat");
         try{
             if (!id_pasien.isEmpty()) {
-                String sql = "SELECT * FROM pasien WHERE id_pasien = '"+id_pasien+"'";
+                String sql = "CALL p4("+id_pasien+")"; 
                 java.sql.Connection conn = (java.sql.Connection)convig.configDB();
                 java.sql.Statement stm = conn.createStatement();
                 java.sql.ResultSet res = stm.executeQuery(sql);
-                while  (res.next()){
-                    model.addRow(new Object[]{res.getString(1),res.getString(2),res.getString(3), res.getString(4), res.getString(5)
-                                               , res.getString(6), res.getString(7), res.getString(8), res.getString(9), res.getString(10)});
-                }
-                tPasien.setModel(model);
-                jTextField6.setText("");
+                if  (res.next()){
+                    String message = res.getString("message");
+                    if (message.equals("OK")) {
+                        String sql1 = "SELECT * FROM pasien WHERE id_pasien = '"+id_pasien+"'";
+                        java.sql.Connection conn1 = (java.sql.Connection)convig.configDB();
+                        java.sql.Statement stm1 = conn1.createStatement();
+                        java.sql.ResultSet res1 = stm1.executeQuery(sql1);
+                        while  (res1.next()){
+                            model.addRow(new Object[]{res1.getString(1),res1.getString(2),res1.getString(3), res1.getString(4), res1.getString(5)
+                                                       , res1.getString(6), res1.getString(7), res1.getString(8), res1.getString(9), res1.getString(10)});
+                        }
+                        tPasien.setModel(model);
+                        jTextField6.setText("");                
+                    }else{
+                        JOptionPane.showMessageDialog(null, "Data Tidak Ditemukan", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+                } 
             }else{
                 JOptionPane.showMessageDialog(null, "Data yang Diinputkan Kosong!", "Error", JOptionPane.ERROR_MESSAGE);
             }
@@ -889,6 +916,7 @@ public class Patient extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;

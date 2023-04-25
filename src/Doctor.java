@@ -25,8 +25,9 @@ public class Doctor extends javax.swing.JFrame {
     public Doctor() {
         initComponents();
         tDokter.getTableHeader().setFont(new Font("SansSerif", Font.BOLD, 18));
-        //tDokter.getTableHeader().setOpaque(false);
-        //tDokter.setRowHeight(25);
+        tDokter.getTableHeader().setOpaque(false);
+        tDokter.setRowHeight(25);
+        tDokter.setEnabled(false);
     }
 
     /**
@@ -53,6 +54,8 @@ public class Doctor extends javax.swing.JFrame {
         jLabel20 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jButton12 = new javax.swing.JButton();
         search = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -214,36 +217,59 @@ public class Doctor extends javax.swing.JFrame {
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bg1.png"))); // NOI18N
 
         jLabel12.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
-        jLabel12.setText("Lorem Ipsum");
+        jLabel12.setText("Doctor's page");
 
         jLabel20.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabel20.setText("Lorem Ipsum is simply dummy text of the printing and");
+        jLabel20.setText("What I pay the doctor is only his expertise.");
 
         jLabel21.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabel21.setText("typesetting industry. Lorem Ipsum has been");
+        jLabel21.setText("My feelings when he healed I could not repay.");
 
         jLabel23.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabel23.setText("the industry's");
+        jLabel23.setText("That's debt.");
+
+        jLabel22.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel22.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/user.png"))); // NOI18N
+        jLabel22.setText("Admin! ");
+        jLabel22.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+
+        jButton12.setBackground(new java.awt.Color(0, 0, 0));
+        jButton12.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jButton12.setForeground(new java.awt.Color(255, 255, 255));
+        jButton12.setText("Search");
+        jButton12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton12ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout HomeLayout = new javax.swing.GroupLayout(Home);
         Home.setLayout(HomeLayout);
         HomeLayout.setHorizontalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HomeLayout.createSequentialGroup()
-                .addGap(68, 68, 68)
+                .addGap(66, 66, 66)
                 .addComponent(jLabel19)
-                .addGap(79, 79, 79)
+                .addGap(81, 81, 81)
                 .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel12)
                     .addComponent(jLabel20)
                     .addComponent(jLabel21)
-                    .addComponent(jLabel23))
-                .addContainerGap(51, Short.MAX_VALUE))
+                    .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jButton12, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabel23, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(105, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel22)
+                .addGap(27, 27, 27))
         );
         HomeLayout.setVerticalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HomeLayout.createSequentialGroup()
-                .addContainerGap(149, Short.MAX_VALUE)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel22)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 109, Short.MAX_VALUE)
                 .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
                         .addComponent(jLabel12)
@@ -253,10 +279,12 @@ public class Doctor extends javax.swing.JFrame {
                         .addComponent(jLabel21)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel23)
-                        .addGap(222, 222, 222))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton12)
+                        .addGap(173, 173, 173))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
                         .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(137, 137, 137))))
+                        .addGap(91, 91, 91))))
         );
 
         main.add(Home, "card2");
@@ -688,7 +716,7 @@ public class Doctor extends javax.swing.JFrame {
             java.sql.ResultSet res = stm.executeQuery(sql);
             while  (res.next()){
                model.addRow(new Object[]{res.getString(1),res.getString(2),res.getString(3), res.getString(4), res.getString(5)});
-                        }
+            }
             tDokter.setModel(model);
         }catch (SQLException exp) {
              JOptionPane.showMessageDialog(this, exp.getMessage());
@@ -767,14 +795,26 @@ public class Doctor extends javax.swing.JFrame {
         model.addColumn("Spesialis");
         try{
             if (!id_dokter.isEmpty()) {
-                String sql = "SELECT * FROM dokter WHERE id_dokter = '"+id_dokter+"'";
-                java.sql.Connection conn = (Connection)convig.configDB();
+                String sql = "CALL p3("+id_dokter+")"; 
+                java.sql.Connection conn = (java.sql.Connection)convig.configDB();
                 java.sql.Statement stm = conn.createStatement();
                 java.sql.ResultSet res = stm.executeQuery(sql);
-                while  (res.next()){
-                    model.addRow(new Object[]{res.getString(1),res.getString(2),res.getString(3), res.getString(4), res.getString(5)});
+                if  (res.next()){
+                    String message = res.getString("message");
+                    if (message.equals("OK")) {
+                        String sql1 = "SELECT * FROM dokter WHERE id_dokter = '"+id_dokter+"'";
+                        java.sql.Connection conn1 = (Connection)convig.configDB();
+                        java.sql.Statement stm1 = conn1.createStatement();
+                        java.sql.ResultSet res1 = stm1.executeQuery(sql1);
+                        while  (res1.next()){
+                            model.addRow(new Object[]{res1.getString(1),res1.getString(2),res1.getString(3), res1.getString(4), 
+                                res1.getString(5)});
+                        }
+                        tDokter.setModel(model);              
+                    }else{
+                        JOptionPane.showMessageDialog(null, "Data Tidak Ditemukan", "Error", JOptionPane.ERROR_MESSAGE);
+                    }
                 }
-                tDokter.setModel(model);
             }else{
                 JOptionPane.showMessageDialog(null, "Data yang Diinputkan Kosong!", "Error", JOptionPane.ERROR_MESSAGE);
             }
@@ -863,7 +903,6 @@ public class Doctor extends javax.swing.JFrame {
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         String id_dokter = jTextField7.getText();
-        //jTextField7.setText("");
         jTextField8.setText("");
         jTextField9.setText("");
         jTextField10.setText("");
@@ -924,14 +963,23 @@ public class Doctor extends javax.swing.JFrame {
                 if  (res.next()){
                     String message = res.getString("message");
                     if (message.equals("OK")) {
-                       String sql1= "DELETE FROM dokter WHERE id_dokter = '"+id_dokter+"'";
-                       java.sql.Connection conn1=(Connection)convig.configDB();
-                       java.sql.PreparedStatement pst1 = conn1.prepareStatement(sql1);
-                       pst1.execute();
-                       JOptionPane.showMessageDialog(null, "Hapus Data Berhasil", "Success", JOptionPane.INFORMATION_MESSAGE);                 
+                        int jawab = JOptionPane.showOptionDialog(this,
+                                    "Yakin Ingin Keluar?",
+                                    "Exit",
+                                    JOptionPane.YES_NO_OPTION,
+                                    JOptionPane.QUESTION_MESSAGE, null, null, null);
+                        if(jawab == JOptionPane.YES_OPTION){
+                            String sql1= "DELETE FROM dokter WHERE id_dokter = '"+id_dokter+"'";
+                            java.sql.Connection conn1=(Connection)convig.configDB();
+                            java.sql.PreparedStatement pst1 = conn1.prepareStatement(sql1);
+                            pst1.execute();
+                            JOptionPane.showMessageDialog(null, "Hapus Data Berhasil", "Success", JOptionPane.INFORMATION_MESSAGE);
+                            
+                        }                
                     }else{
                         JOptionPane.showMessageDialog(null, "Data Tidak Ditemukan", "Error", JOptionPane.ERROR_MESSAGE);
                     }
+                    jTextField12.setText("");
                 }
             }else{
                 JOptionPane.showMessageDialog(null, "Data yang Diinputkan Kosong!", "Error", JOptionPane.ERROR_MESSAGE);
@@ -941,8 +989,19 @@ public class Doctor extends javax.swing.JFrame {
         }catch (Exception e){
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }
-        jTextField12.setText("");
+        
     }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
+        main.removeAll();
+        main.repaint();
+        main.revalidate();
+
+        main.add(search);
+        main.repaint();
+        main.revalidate();
+        load_table(); 
+    }//GEN-LAST:event_jButton12ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -990,6 +1049,7 @@ public class Doctor extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1012,6 +1072,7 @@ public class Doctor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

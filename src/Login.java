@@ -4,6 +4,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import javax.swing.JOptionPane;
+import javax.swing.*;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -170,11 +171,12 @@ public class Login extends javax.swing.JFrame {
                 Statement stm = conn.createStatement();
                 ResultSet res = stm.executeQuery(sql);
                 if (res.next()) {
-                    JOptionPane.showMessageDialog(null, "Berhasil Login!", "Berhasil",JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, "Berhasil Login!", "Succses",JOptionPane.INFORMATION_MESSAGE);
                     new Home().setVisible(true);
                     this.setVisible(false);    
                 }else{
                     JOptionPane.showMessageDialog(null, "Password atau Username Salah", "Error",JOptionPane.ERROR_MESSAGE);
+                    username.requestFocus();
                     password.requestFocus();
                 }
             }else{

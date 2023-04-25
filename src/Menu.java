@@ -66,7 +66,7 @@ public class Menu extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Lorem Ipsum");
+        jLabel11.setText("Menu Options");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 

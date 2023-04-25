@@ -52,6 +52,7 @@ public class Reservation extends javax.swing.JFrame implements Cek{
         jLabel21 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jLabel22 = new javax.swing.JLabel();
+        jButton13 = new javax.swing.JButton();
         cekin = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jButton6 = new javax.swing.JButton();
@@ -212,26 +213,25 @@ public class Reservation extends javax.swing.JFrame implements Cek{
         Menu.setLayout(MenuLayout);
         MenuLayout.setHorizontalGroup(
             MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, MenuLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(41, 41, 41))
             .addGroup(MenuLayout.createSequentialGroup()
-                .addGroup(MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(MenuLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1))
-                    .addGroup(MenuLayout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addGroup(MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(back, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(0, 33, Short.MAX_VALUE))
+                .addGap(23, 23, 23)
+                .addComponent(jLabel1)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
         MenuLayout.setVerticalGroup(
             MenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(MenuLayout.createSequentialGroup()
-                .addGap(35, 35, 35)
+                .addGap(36, 36, 36)
                 .addComponent(jLabel1)
-                .addGap(64, 64, 64)
+                .addGap(110, 110, 110)
                 .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -250,48 +250,63 @@ public class Reservation extends javax.swing.JFrame implements Cek{
         jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bg3.jpg"))); // NOI18N
 
         jLabel20.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabel20.setText("Lorem Ipsum is simply dummy text of the printing and");
+        jLabel20.setText("People are waiting for you to come home. Atmosphere");
 
         jLabel21.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabel21.setText("typesetting industry. Lorem Ipsum has been");
+        jLabel21.setText("in the hospital must make you tired,");
 
         jLabel23.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
-        jLabel23.setText("the industry's");
+        jLabel23.setText("so get well soon.");
 
         jLabel22.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
-        jLabel22.setText("Lorem Ipsum");
+        jLabel22.setText("Reservation Page");
+
+        jButton13.setBackground(new java.awt.Color(0, 0, 0));
+        jButton13.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jButton13.setForeground(new java.awt.Color(255, 255, 255));
+        jButton13.setText("Check In");
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout HomeLayout = new javax.swing.GroupLayout(Home);
         Home.setLayout(HomeLayout);
         HomeLayout.setHorizontalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(HomeLayout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addGap(72, 72, 72)
                 .addComponent(jLabel19)
-                .addGap(42, 42, 42)
+                .addGap(31, 31, 31)
                 .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel22)
                     .addComponent(jLabel20)
                     .addComponent(jLabel21)
-                    .addComponent(jLabel23))
-                .addContainerGap(88, Short.MAX_VALUE))
+                    .addComponent(jLabel23)
+                    .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         HomeLayout.setVerticalGroup(
             HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
-                .addContainerGap(184, Short.MAX_VALUE)
+                .addContainerGap(196, Short.MAX_VALUE)
                 .addComponent(jLabel22)
-                .addGap(32, 32, 32)
-                .addComponent(jLabel20)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel21)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel23)
-                .addGap(324, 324, 324))
-            .addGroup(HomeLayout.createSequentialGroup()
-                .addGap(159, 159, 159)
-                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(HomeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(HomeLayout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel20)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel21)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel23)
+                        .addGap(28, 28, 28)
+                        .addComponent(jButton13)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, HomeLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(161, 161, 161))))
         );
 
         main.add(Home, "card2");
@@ -421,7 +436,7 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                                         .addComponent(jLabel26)))
                                 .addGap(17, 17, 17)
                                 .addComponent(jButton8)))))
-                .addGap(48, 49, Short.MAX_VALUE))
+                .addGap(48, 83, Short.MAX_VALUE))
         );
         cekinLayout.setVerticalGroup(
             cekinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -460,7 +475,7 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                     .addComponent(D, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel25)
                     .addComponent(jButton8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 214, Short.MAX_VALUE)
                 .addGroup(cekinLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton6)
                     .addComponent(jButton16)
@@ -538,6 +553,9 @@ public class Reservation extends javax.swing.JFrame implements Cek{
         jLabel46.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel46.setText("ID Pasien");
 
+        jDateChooser1.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
+        jDateChooser1.setMaxSelectableDate(new java.util.Date(253370739680000L));
+
         jLabel47.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
         jLabel47.setText("Nama Pasien");
 
@@ -564,24 +582,14 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                 .addGap(60, 60, 60)
                 .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(paymentLayout.createSequentialGroup()
-                        .addComponent(jLabel27)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(paymentLayout.createSequentialGroup()
                         .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(paymentLayout.createSequentialGroup()
-                                .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel46)
-                                    .addComponent(jLabel47))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
-                                .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(paymentLayout.createSequentialGroup()
-                                .addComponent(jLabel13)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel47)
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(paymentLayout.createSequentialGroup()
                                 .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel8)
-                                    .addComponent(jLabel17))
+                                    .addComponent(jLabel27))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(paymentLayout.createSequentialGroup()
@@ -589,8 +597,6 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(jButton199, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGroup(paymentLayout.createSequentialGroup()
                                             .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -602,8 +608,22 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                                     .addGroup(paymentLayout.createSequentialGroup()
                                         .addComponent(jLabel16)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                        .addGap(32, 32, 32))
+                                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(paymentLayout.createSequentialGroup()
+                                .addComponent(jLabel46)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(paymentLayout.createSequentialGroup()
+                                .addComponent(jLabel13)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(paymentLayout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 663, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButton199, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(35, 35, 35))
                     .addGroup(paymentLayout.createSequentialGroup()
                         .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel14)
@@ -615,7 +635,7 @@ public class Reservation extends javax.swing.JFrame implements Cek{
             .addGroup(paymentLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
                 .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
                     .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -629,7 +649,7 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                 .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel46)
                     .addComponent(jTextField26, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 120, Short.MAX_VALUE)
+                .addGap(28, 28, 28)
                 .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel47))
@@ -649,11 +669,11 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                             .addComponent(jPay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel15)
-                        .addComponent(jLabel16)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel16))
+                    .addComponent(jLabel15))
+                .addGap(66, 66, 66)
                 .addGroup(paymentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton200)
                     .addComponent(jButton3))
@@ -667,21 +687,21 @@ public class Reservation extends javax.swing.JFrame implements Cek{
         jPanel2.setBackground(new java.awt.Color(214, 230, 253));
 
         jLabel5.setFont(new java.awt.Font("SansSerif", 1, 36)); // NOI18N
-        jLabel5.setText("Halaman Update");
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bill.png"))); // NOI18N
+        jLabel5.setText("Receipt");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(333, 333, 333)
                 .addComponent(jLabel5)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
+                .addContainerGap()
                 .addComponent(jLabel5)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -743,7 +763,7 @@ public class Reservation extends javax.swing.JFrame implements Cek{
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(152, 152, 152)
+                .addGap(202, 202, 202)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel35)
@@ -779,9 +799,9 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                             .addComponent(jLabel37))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextField16, javax.swing.GroupLayout.DEFAULT_SIZE, 422, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1))))
-                .addContainerGap(217, Short.MAX_VALUE))
+                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -862,7 +882,7 @@ public class Reservation extends javax.swing.JFrame implements Cek{
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(200, Short.MAX_VALUE)
+                .addContainerGap(188, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addComponent(jLabel41)
@@ -887,12 +907,12 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jLabel45))
                             .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, 422, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(144, 144, 144))
+                .addGap(156, 156, 156))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(139, 139, 139)
+                .addGap(123, 123, 123)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel38)
                     .addComponent(jTextField21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -911,7 +931,7 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel41)
                     .addComponent(jTextField23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(202, Short.MAX_VALUE))
+                .addContainerGap(239, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Data Reservasi", jPanel4);
@@ -956,8 +976,8 @@ public class Reservation extends javax.swing.JFrame implements Cek{
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(134, 134, 134)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                .addContainerGap(174, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel43)
                     .addComponent(jLabel42)
@@ -976,7 +996,7 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextField17, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jButton12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(171, Short.MAX_VALUE))
+                .addGap(165, 165, 165))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1002,7 +1022,7 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                     .addComponent(jLabel51))
                 .addGap(18, 18, 18)
                 .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(195, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Data Payment", jPanel6);
@@ -1015,7 +1035,9 @@ public class Reservation extends javax.swing.JFrame implements Cek{
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout kwitansiLayout = new javax.swing.GroupLayout(kwitansi);
@@ -1085,7 +1107,7 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                     .addComponent(jTextField12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addComponent(jButton11)
-                .addContainerGap(396, Short.MAX_VALUE))
+                .addContainerGap(414, Short.MAX_VALUE))
         );
 
         main.add(cekout, "card6");
@@ -1121,6 +1143,8 @@ public class Reservation extends javax.swing.JFrame implements Cek{
     String id_spe ;
     String a;
     String Tharga;
+    String idpas;
+    String nama;
     
     @Override
     public void cek(String id_pasien) {
@@ -1184,26 +1208,25 @@ public class Reservation extends javax.swing.JFrame implements Cek{
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }        
      }
+     
      public void cek(String id_reservasi, String id_pasien) {
-        try{
-            String sql = "DELETE FROM reservasi WHERE id_reservasi = '"+ id_reservasi +"'"; 
-            java.sql.Connection conn = (java.sql.Connection)convig.configDB();
-            java.sql.Statement stm = conn.createStatement();
-            java.sql.ResultSet res = stm.executeQuery(sql);
-            if  (res.next()){
-                String sql1 = "SELECT * FROM pasien WHERE id_pasien = '"+ id_pasien +"'"; 
-                java.sql.Connection conn1 = (java.sql.Connection)convig.configDB();
-                java.sql.Statement stm1 = conn1.createStatement();
-                java.sql.ResultSet res1 = stm1.executeQuery(sql);
-                if  (res1.next()){
-                    a = res1.getString("nama");
-                }
+         try{
+            String sql= "DELETE FROM reservasi WHERE id_reservasi = '"+ id_reservasi +"'";
+            java.sql.Connection conn=(java.sql.Connection)convig.configDB();
+            java.sql.PreparedStatement pst = conn.prepareStatement(sql);
+            pst.execute();
+            String sql1 = "SELECT * FROM pasien WHERE id_pasien='"+id_pasien+"'"; 
+            java.sql.Connection conn1 = (java.sql.Connection)convig.configDB();
+            java.sql.Statement stm1 = conn1.createStatement();
+            java.sql.ResultSet res1 = stm1.executeQuery(sql1);
+            if (res1.next()){
+                this.nama = res1.getString("nama");
             }
         }catch (SQLException exp) {
             JOptionPane.showMessageDialog(null, exp.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
         }catch (Exception e){
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
-        }      
+        }
     }
      
     
@@ -1222,7 +1245,6 @@ public class Reservation extends javax.swing.JFrame implements Cek{
         String spin2 = malam.toString();
         String clas = (String)kelas.getSelectedItem();
         String dok = (String)D.getSelectedItem();
-
         try{
             if (!id_reservasi.isEmpty() && !id_pasien.isEmpty() && !tgl_reservasi.isEmpty() && !spin1.isEmpty()
                 && !spin2.isEmpty() && !clas.isEmpty() && !dok.isEmpty()) {
@@ -1302,10 +1324,10 @@ public class Reservation extends javax.swing.JFrame implements Cek{
             if (!id_reservasi.isEmpty() && !id_pasien.isEmpty() && !tgl_reservasi.isEmpty() && !spin1.isEmpty()
                 && !spin2.isEmpty() && !clas.isEmpty() && !dok.isEmpty()) {
                 String sql= "UPDATE reservasi SET tgl_reservasi  = '"+tgl_reservasi+
-                "', hari = '"+spin1+
-                "', malam = '"+spin2+
-                "', tipe_kamar = '"+ clas +
-                "' , dokter = '"+ dok +
+                "', hari = '"+hari+
+                "', malam = '"+malam+
+                "', tipe_kamar = '"+clas+
+                "' , dokter = '"+dok+
                 "'WHERE id_reservasi = '"+ id_reservasi +"'";
                 java.sql.Connection conn=(Connection)convig.configDB();
                 java.sql.PreparedStatement pst = conn.prepareStatement(sql);
@@ -1346,6 +1368,14 @@ public class Reservation extends javax.swing.JFrame implements Cek{
         main.add(payment);
         main.repaint();
         main.revalidate();
+        jTextField17.setText("");
+        jTextField6.setText("");
+        jTextField26.setText("");
+        jTextField28.setText("");
+        jTextField8.setText("");
+        jDateChooser1.setCalendar(null);
+        jPay.setSelectedIndex(0);
+        jTextField5.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -1356,6 +1386,7 @@ public class Reservation extends javax.swing.JFrame implements Cek{
         main.add(cekout);
         main.repaint();
         main.revalidate();
+        jTextField6.setText("");
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton199ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton199ActionPerformed
@@ -1397,7 +1428,84 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                 && !ubayar.isEmpty() && !tgl.isEmpty()) {
                 if (Double.valueOf(tbiaya) > Double.valueOf(ubayar)){
                     double sisa = Double.valueOf(tbiaya) - Double.valueOf(ubayar);
-                    JOptionPane.showMessageDialog(null, "Uang bayar tidak mencapai biaya. Biaya yang masih harus dibayar berupa : " +sisa);
+                    JOptionPane.showMessageDialog(null, "Uang bayar tidak mencapai total biaya. Biaya yang masih harus dibayar berupa :Rp. " +sisa);
+                } else if (Double.valueOf(tbiaya) < Double.valueOf(ubayar)){
+                    double kembali = Double.valueOf(ubayar) - Double.valueOf(tbiaya);
+                    JOptionPane.showMessageDialog(null, "Uang bayar melebihi total biaya. Kembalian biaya sebesar : Rp. "+kembali);
+                    String sql= "INSERT INTO payment VALUES ('"+id_payment+"','"
+                    +id_reservasi
+                    +"','"+tbiaya
+                    +"','"+jpayment+"','"
+                    +tbiaya+"','"
+                    +tgl+"')";
+                    java.sql.Connection conn=(Connection)convig.configDB();
+                    java.sql.PreparedStatement pst = conn.prepareStatement(sql);
+                    pst.execute();
+                    JOptionPane.showMessageDialog(null, "Penyimpanan Berhasil", "Success", JOptionPane.INFORMATION_MESSAGE);
+
+                    String sql1 = "SELECT * FROM pasien LEFT JOIN reservasi ON reservasi.id_pasien = pasien.id_pasien LEFT JOIN payment ON payment.id_reservasi = reservasi.id_reservasi WHERE id_payment = '"+id_payment+"'";
+                    java.sql.Connection conn1 = (Connection)convig.configDB();
+                    java.sql.Statement stm1 = conn.createStatement();
+                    java.sql.ResultSet res1 = stm1.executeQuery(sql1);
+                    while  (res1.next()){
+                        jTextField3.setText(res1.getString("nama"));
+                        jTextField3.setEditable(false);
+                        jTextField4.setText(res1.getString("nik"));
+                        jTextField4.setEditable(false);
+                        jTextField9.setText(res1.getString("tanggal_lahir"));
+                        jTextField9.setEditable(false);
+                        jTextField10.setText(res1.getString("jk"));
+                        jTextField10.setEditable(false);
+                        jTextField11.setText(res1.getString("goldar"));
+                        jTextField11.setEditable(false);
+                        jTextField13.setText(res1.getString("jp"));
+                        jTextField13.setEditable(false);
+                        jTextField15.setText(res1.getString("no_telp"));
+                        jTextField15.setEditable(false);
+                        jTextField16.setText(res1.getString("wali"));
+                        jTextField16.setEditable(false);
+                        jTextArea1.setText(res1.getString("alamat"));
+                        jTextArea1.setEditable(false);
+                    }
+                    String sql2 = "SELECT * FROM reservasi LEFT JOIN payment ON reservasi.id_reservasi = payment.id_reservasi WHERE id_payment = '"+id_payment+"'";
+                    java.sql.Connection conn2 = (Connection)convig.configDB();
+                    java.sql.Statement stm2 = conn2.createStatement();
+                    java.sql.ResultSet res2 = stm2.executeQuery(sql2);
+                    while  (res2.next()){
+                        jTextField21.setText(res2.getString("tgl_reservasi"));
+                        jTextField21.setEditable(false);
+                        jTextField24.setText(res2.getString("hari"));
+                        jTextField24.setEditable(false);
+                        jTextField25.setText(res2.getString("malam"));
+                        jTextField25.setEditable(false);
+                        jTextField22.setText(res2.getString("tipe_kamar"));
+                        jTextField22.setEditable(false);
+                        jTextField23.setText(res2.getString("dokter"));
+                        jTextField23.setEditable(false);
+                    }
+
+                    String sql3 = "SELECT * FROM payment WHERE id_payment = '"+id_payment+"'";
+                    java.sql.Connection conn3 = (Connection)convig.configDB();
+                    java.sql.Statement stm3 = conn3.createStatement();
+                    java.sql.ResultSet res3 = stm3.executeQuery(sql3);
+                    while  (res3.next()){
+                        jTextField18.setText(res3.getString("tgl"));
+                        jTextField18.setEditable(false);
+                        jTextField17.setText(res3.getString("tbiaya"));
+                        jTextField17.setEditable(false);
+                        jTextField19.setText(res3.getString("jpayment"));
+                        jTextField19.setEditable(false);
+                        jTextField20.setText(res3.getString("ubayar"));
+                        jTextField20.setEditable(false);
+                    }
+                    main.removeAll();
+                    main.repaint();
+                    main.revalidate();
+
+                    main.add(kwitansi);
+                    main.repaint();
+                    main.revalidate();
+                
                 }else{
                     String sql= "INSERT INTO payment VALUES ('"+id_payment+"','"
                     +id_reservasi
@@ -1491,13 +1599,13 @@ public class Reservation extends javax.swing.JFrame implements Cek{
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         jTextField17.setText("");
-        jTextField16.setText("");
+        jTextField6.setText("");
         jTextField26.setText("");
         jTextField28.setText("");
-        jTextField18.setText("");
+        jTextField8.setText("");
         jDateChooser1.setCalendar(null);
         jPay.setSelectedIndex(0);
-        jTextField15.setText("");
+        jTextField5.setText("");
         
     }//GEN-LAST:event_jButton3ActionPerformed
 
@@ -1529,19 +1637,18 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                         java.sql.Statement stm1 = conn1.createStatement();
                         java.sql.ResultSet res1 = stm1.executeQuery(sql1);
                         if  (res1.next()){
-                            idpas = res1.getString("id_pasien");
+                            this.idpas = res1.getString("id_pasien");
                             int jawab = JOptionPane.showOptionDialog(this,
                                         "Apakah Data yang Diinputkan Sudah benar?",
                                         "Exit",
                                         JOptionPane.YES_NO_OPTION,
                                         JOptionPane.QUESTION_MESSAGE, null, null, null);
                             if(jawab == JOptionPane.YES_OPTION){
-                                cek(id_reservasi,idpas);
-                                JOptionPane.showMessageDialog(null, a+" Berhasil Check Out!", "Succses", JOptionPane.ERROR_MESSAGE);
+                                cek(id_reservasi,this.idpas);
+                                JOptionPane.showMessageDialog(null, nama+" Berhasil Check Out!", "Succses", JOptionPane.ERROR_MESSAGE);
                                 jTextField12.setText("");
                             }
-                        }
-                        
+                        }  
                     }else{
                         JOptionPane.showMessageDialog(null, "Belum Melakukan Payment!", "Error", JOptionPane.ERROR_MESSAGE);
                     }
@@ -1550,11 +1657,21 @@ public class Reservation extends javax.swing.JFrame implements Cek{
                 JOptionPane.showMessageDialog(null, "Data yang Diinputkan Kosong!", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }catch (SQLException exp) {
-            JOptionPane.showMessageDialog(null, exp.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, exp.getMessage(), "Error3", JOptionPane.ERROR_MESSAGE);
         }catch (Exception e){
-            JOptionPane.showMessageDialog(null, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(null, e.getMessage(), "Error4", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        main.removeAll();
+        main.repaint();
+        main.revalidate();
+
+        main.add(cekin);
+        main.repaint();
+        main.revalidate();
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1601,6 +1718,7 @@ public class Reservation extends javax.swing.JFrame implements Cek{
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton199;
     private javax.swing.JButton jButton2;
